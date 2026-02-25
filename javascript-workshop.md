@@ -76,10 +76,65 @@ JavaScript สามารถเพิ่มลงในเว็บเพจไ
    - มีปุ่มเมื่อคลิกแล้วจะแสดงข้อความที่กรอกในช่องข้อความ  (สามารถใช้ document.getElementById('id ของ textbox').value เพื่อดึงข้อมูลในช่อง)
 ### บันทึกผลการทดลอง 
 ```html
-[บันทึกโค้ด ที่นี่]
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <!-- Internal JavaScript -->
+    <script>
+        function showDate() {
+            const today = new Date();
+            document.getElementById("output").innerHTML = today.toLocaleDateString();
+        }
+
+        function showText() {
+            const text = document.getElementById("textbox").value;
+            document.getElementById("output").innerHTML = text;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Lab1</h2>
+
+
+    <button onclick="document.getElementById('output').innerHTML='ศรัณย์ สังขบุญ'">
+        ปุ่ม1
+    </button>
+
+
+    <button onclick="showDate()">
+        ปุ่ม2
+    </button>
+
+
+    <button onclick="showTime()">
+        ปุ่ม3
+    </button>
+
+    <hr>
+
+
+    <input type="text" id="textbox">
+    <button onclick="showText()">กด</button>
+
+    <hr>
+
+    <h3>ผลลัพธ์:</h3>
+    <p id="output"></p>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
 ```
 **รูปผลการทดลอง**
-![รูปผลการทดลองที่ 1](images/image.png)
+![รูปผลการทดลองที่ 1](<img width="1919" height="1030" alt="image" src="https://github.com/user-attachments/assets/3b77eacb-6061-4fff-ac4f-4769bc206a5c" />
+)
 
 ## การทดลองที่ 2: พื้นฐาน JavaScript
 ### 2.1 การประกาศตัวแปรและชนิดข้อมูล
