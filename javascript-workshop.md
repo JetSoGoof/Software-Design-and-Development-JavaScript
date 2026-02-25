@@ -529,10 +529,81 @@ for (let i = 1; i <= 5; i++) {
 
 ### บันทึกผลการทดลอง 2.3
 ```html
-[บันทึกโค้ด ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <title>lab2.3</title>
+</head>
+
+<body>
+
+    <h2>ผลลัพธ์การทำงาน</h2>
+    <pre id="output"></pre>
+
+    <script>
+
+        let output = "";
+
+        let number = 7;
+
+        if (number % 2 === 0) {
+            output += number + " เป็นเลขคู่\n";
+        } else {
+            output += number + " เป็นเลขคี่\n";
+        }
+
+        output += "\n";
+
+
+        output += "สูตรคูณแม่ 2\n";
+        for (let i = 1; i <= 12; i++) {
+            output += "2 x " + i + " = " + (2 * i) + "\n";
+        }
+
+        output += "\n";
+
+
+        output += "สูตรคูณแม่ 3\n";
+        let i = 1;
+        while (i <= 12) {
+            output += "3 x " + i + " = " + (3 * i) + "\n";
+            i++;
+        }
+
+        output += "\n";
+
+        output += "นับถอยหลัง\n";
+        for (let j = 10; j >= 1; j--) {
+            output += j + "\n";
+        }
+
+        output += "\n";
+
+        let age = 20;
+
+        if (age <= 12) {
+            output += "อายุ " + age + " ปี อยู่ในช่วงวัยเด็ก\n";
+        } else if (age <= 19) {
+            output += "อายุ " + age + " ปี อยู่ในช่วงวัยรุ่น\n";
+        } else {
+            output += "อายุ " + age + " ปี อยู่ในช่วงวัยผู้ใหญ่\n";
+        }
+
+
+        document.getElementById("output").textContent = output;
+
+    </script>
+
+</body>
+
+</html>
 ```
 **รูปผลการทดลอง**
 ![รูปผลการทดลองที่ 2.3](images/image.png)
+<img width="1919" height="1029" alt="image" src="https://github.com/user-attachments/assets/8233de43-9016-40ff-81d5-07a8d695e747" />
+
 
 ### 2.4 Functions และ Arrow Functions
 
