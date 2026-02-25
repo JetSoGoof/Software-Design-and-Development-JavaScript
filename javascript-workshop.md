@@ -191,11 +191,85 @@ let person = {
 
 ### บันทึกผลการทดลอง 2.1
 ```html
-[บันทึกโค้ด ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ระบบคำนวณเกรดนักศึกษา</title>
+</head>
+
+<body>
+
+    <h2>ระบบคำนวณเกรดนักศึกษา</h2>
+
+    <label>รหัสนักศึกษา:</label>
+    <input type="text" id="studentId"><br><br>
+
+    <label>ชื่อนักศึกษา:</label>
+    <input type="text" id="studentName"><br><br>
+
+    <label>สาขาวิชา:</label>
+    <input type="text" id="major"><br><br>
+
+    <label>คะแนนกลางภาค:</label>
+    <input type="number" id="midterm"><br><br>
+
+    <label>คะแนนปลายภาค:</label>
+    <input type="number" id="final"><br><br>
+
+    <button onclick="calculateStudent()">คำนวณเกรด</button>
+
+    <h3>ผลลัพธ์</h3>
+    <p id="result"></p>
+
+    <script>
+        function calculateGrade(score) {
+            if (score >= 80) return "A";
+            else if (score >= 70) return "B";
+            else if (score >= 60) return "C";
+            else if (score >= 50) return "D";
+            else return "F";
+        }
+
+        function calculateStudent() {
+
+            let studentId = document.getElementById("studentId").value;
+            let studentName = document.getElementById("studentName").value;
+            let major = document.getElementById("major").value;
+            let midtermScore = Number(document.getElementById("midterm").value);
+            let finalScore = Number(document.getElementById("final").value);
+
+            let totalScore = midtermScore + finalScore;
+            let grade = calculateGrade(totalScore);
+
+            const student = {
+                studentId: studentId,
+                name: studentName,
+                major: major,
+                midterm: midtermScore,
+                final: finalScore,
+                total: totalScore,
+                grade: grade
+            };
+
+            document.getElementById("result").innerHTML =
+                "รหัส: " + student.studentId + "<br>" +
+                "ชื่อ: " + student.name + "<br>" +
+                "สาขา: " + student.major + "<br>" +
+                "คะแนนรวม: " + student.total + "<br>" +
+                "เกรด: " + student.grade;
+        }
+    </script>
+
+</body>
+
+</html>
 ```
 **รูปผลการทดลอง**
 ![รูปผลการทดลองที่ 2.1](images/image.png)
 
+<img width="1919" height="1031" alt="image" src="https://github.com/user-attachments/assets/55245037-93ef-4542-aa7e-997e1b4cf525" />
 
 ### 2.2 การดำเนินการทางคณิตศาสตร์
 
