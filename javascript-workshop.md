@@ -133,8 +133,9 @@ JavaScript สามารถเพิ่มลงในเว็บเพจไ
 </html>
 ```
 **รูปผลการทดลอง**
-![รูปผลการทดลองที่ 1](<img width="1919" height="1030" alt="image" src="https://github.com/user-attachments/assets/3b77eacb-6061-4fff-ac4f-4769bc206a5c" />
-)
+![รูปผลการทดลองที่ 1]
+<img width="1918" height="1032" alt="image" src="https://github.com/user-attachments/assets/28dc024c-b92c-4e63-8676-70ecad3c291b" />
+
 
 ## การทดลองที่ 2: พื้นฐาน JavaScript
 ### 2.1 การประกาศตัวแปรและชนิดข้อมูล
